@@ -20,6 +20,3 @@ A cybersecurity project focused on **monitoring and securing Active Directory (A
 - User & System Provisioning
 - AD Security Monitoring & Incident Response
 
-
-```bash
-git clone https://github.com/yourusername/active-directory-security-monitoring.git
