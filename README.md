@@ -1,28 +1,18 @@
 Enterprise Active Directory Security Lab
 
-Blue Team Detection Engineering | Windows Server 2022 | VirtualBox
-
 ## Project Summary
 
 This project is a production-modeled Active Directory (AD) security lab designed to simulate enterprise authentication, access control, attack activity, and Blue Team detection workflows.
 
-It demonstrates hands-on experience with:
-
-Active Directory administration
-
-Role-Based Access Control (RBAC)
-
-Advanced Group Policy engineering
-
-Windows security event analysis
-
-Authentication monitoring
-
-PowerShell telemetry configuration
-
-Account lockout & brute-force detection
-
-Detection validation through controlled attack simulation
+- It demonstrates hands-on experience with:
+- Active Directory administration
+- Role-Based Access Control (RBAC)
+- Advanced Group Policy engineering
+- Windows security event analysis
+- Authentication monitoring
+- PowerShell telemetry configuration
+- Account lockout & brute-force detection
+- Detection validation through controlled attack simulation
 
 ## Objective
 
@@ -30,43 +20,35 @@ The goal of this lab is to understand and validate how authentication events, pr
 
 It bridges the gap between system administration and defensive security monitoring, providing a realistic environment for Blue Team skill development.
 
-🏗 Lab Architecture
-Component	Description
-Domain Controller	Windows Server 2022
-Domain Name	king.local
-Client Machine	Domain-joined Windows client (King-Client)
-Network	Isolated VirtualBox internal lab network
-🔐 Active Directory Architecture
+## Lab Architecture
+
+Component               Description
+- Domain Controller    	Windows Server 2022
+- Domain Name	          king.local
+- Client Machine	      Domain-joined Windows client (King-Client)
+- Network              	Isolated VirtualBox internal lab network
+  
+## Active Directory Architecture
 
 Organizational Unit (OU) Design
-
-King-Users
-
-King-Admins
-
-King-Computers
-
+- King-Users
+- King-Admins
+- King-Computers
 Structured OU design reflects enterprise separation of duties and scalable policy enforcement.
 
-👥 Role-Based Access Control (RBAC)
+## Role-Based Access Control (RBAC)
 
 Security Groups Created
-
-Blue-Team (Defensive Operations)
-
-Red-Team (Offensive Simulation)
-
-Purple-Team (Hybrid Operations)
+- Blue-Team (Defensive Operations)
+- Red-Team (Offensive Simulation)
+- Purple-Team (Hybrid Operations)
 
 Users assigned to groups simulate realistic enterprise access delegation and privilege separation, demonstrating understanding of:
+- Least privilege principle
+- Group-based access management
+- Administrative tiering concepts
 
-Least privilege principle
-
-Group-based access management
-
-Administrative tiering concepts
-
-🛠 Group Policy & Security Engineering
+## Group Policy & Security Engineering
 Password & Account Lockout Enforcement
 
 Configured domain-level security controls:
