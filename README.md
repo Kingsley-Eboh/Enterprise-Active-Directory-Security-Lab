@@ -97,9 +97,7 @@ Provides deep visibility into:
 - Living-off-the-land techniques
 - Privileged activity tracking
 
-
-
-🔴 Attack Simulation & Detection Validation
+## Attack Simulation & Detection Validation
 
 Performed controlled simulations using a single client VM:
 - Brute-force authentication attempts (4625, 4740)
