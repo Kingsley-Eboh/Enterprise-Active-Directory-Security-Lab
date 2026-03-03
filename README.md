@@ -22,11 +22,11 @@ It bridges the gap between system administration and defensive security monitori
 
 ## Lab Architecture
 
-Component               Description
-- Domain Controller    	Windows Server 2022
-- Domain Name	          king.local
-- Client Machine	      Domain-joined Windows client (King-Client)
-- Network              	Isolated VirtualBox internal lab network
+Component               
+- Domain Controller    	(Windows Server 2022)
+- Domain Name	          (king.local)
+- Client Machine	      (Domain-joined Windows client (King-Client))
+- Network              	(Isolated VirtualBox internal lab network)
   
 ## Active Directory Architecture
 
@@ -49,95 +49,56 @@ Users assigned to groups simulate realistic enterprise access delegation and pri
 - Administrative tiering concepts
 
 ## Group Policy & Security Engineering
+
 Password & Account Lockout Enforcement
-
-Configured domain-level security controls:
-
-Minimum password length: 10
-
-Password complexity enabled
-
-Password history enforced
-
-Account lockout threshold: 5 failed attempts
-
-Lockout duration: 15 minutes
+- Configured domain-level security controls:
+- Minimum password length: 10
+- Password complexity enabled
+- Password history enforced
+- Account lockout threshold: 5 failed attempts
+- Lockout duration: 15 minutes
 
 Detection Validated:
-
-Event ID 4740 – Account Locked Out
-
-Event ID 4625 – Failed Logon
-
+- Event ID 4740 – Account Locked Out
+- Event ID 4625 – Failed Logon
 Successfully simulated brute-force attacks and validated centralized logging.
 
-📊 Advanced Audit Policy Engineering
+## Advanced Audit Policy Engineering
 
 Created a dedicated security-focused GPO without modifying the default domain policy. Enabled detailed auditing:
 
 Authentication Monitoring
-
-4624 – Successful Logon
-
-4625 – Failed Logon
-
-4672 – Special Privileges Assigned
-
-4768 – Kerberos TGT Request
-
-4769 – Service Ticket Request
-
+- 4624 – Successful Logon
+- 4625 – Failed Logon
+- 4672 – Special Privileges Assigned
+- 4768 – Kerberos TGT Request
+- 4769 – Service Ticket Request
+  
 Account & Privilege Monitoring
-
-4720 – User Account Created
-
-4728 – User Added to Security Group
+- 4720 – User Account Created
+- 4728 – User Added to Security Group
 
 Directory Service Changes
-
 Process Monitoring
-
-4688 – Process Creation (with full command-line logging enabled)
-
-4719 – Audit policy modifications
-
+- 4688 – Process Creation (with full command-line logging enabled)
+- 4719 – Audit policy modifications
 Enabled audit subcategory override enforcement to capture granular activity beyond default Windows logging.
 
-🖥 Endpoint Telemetry & PowerShell Visibility
+## Endpoint Telemetry & PowerShell Visibility
 
 Configured enhanced PowerShell logging via GPO:
-
-Script Block Logging (4104)
-
-Module Logging (4103)
-
-PowerShell Transcription
-
-Command-line auditing for all process creation events
-
+- Script Block Logging (4104)
+- Module Logging (4103)
+- PowerShell Transcription
+- Command-line auditing for all process creation events
+  
 Provides deep visibility into:
+- Script execution
+- Suspicious or obfuscated PowerShell commands
+- Living-off-the-land techniques
+- Privileged activity tracking
 
-Script execution
 
-Suspicious or obfuscated PowerShell commands
-
-Living-off-the-land techniques
-
-Privileged activity tracking
-
-🔎 Baseline Authentication Profiling
-
-Generated controlled normal user activity from the domain-joined client:
-
-Interactive logons
-
-Failed logons
-
-Application execution
-
-PowerShell command execution
-
-Collected and analyzed corresponding Security Event IDs on the Domain Controller to establish a baseline for anomaly detection.
 
 🔴 Attack Simulation & Detection Validation
 
