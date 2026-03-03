@@ -1,10 +1,9 @@
-Enterprise Active Directory Security Lab
 
 ## Project Summary
 
 This project is a production-modeled Active Directory (AD) security lab designed to simulate enterprise authentication, access control, attack activity, and Blue Team detection workflows.
 
-- It demonstrates hands-on experience with:
+It demonstrates hands-on experience with:
 - Active Directory administration
 - Role-Based Access Control (RBAC)
 - Advanced Group Policy engineering
@@ -103,87 +102,40 @@ Provides deep visibility into:
 🔴 Attack Simulation & Detection Validation
 
 Performed controlled simulations using a single client VM:
-
-Brute-force authentication attempts (4625, 4740)
-
-Unauthorized group membership changes (4728, 4729)
-
-Privilege escalation scenarios (4672, 4688)
-
-Suspicious PowerShell execution (4103, 4104)
-
-Abnormal Kerberos ticket activity (4768, 4769)
+- Brute-force authentication attempts (4625, 4740)
+- Unauthorized group membership changes (4728, 4729)
+- Privilege escalation scenarios (4672, 4688)
+- Suspicious PowerShell execution (4103, 4104)
+- Abnormal Kerberos ticket activity (4768, 4769)
 
 All simulations were validated against Windows Security logs to confirm detection visibility.
 
-🛡 Hardening & Remediation
+## Skills Demonstrated
 
-Implemented enterprise-style security hardening:
+- Active Directory Administration
+- Domain controller deployment
+- OU design and structure
+- User and group lifecycle management
+- Security Monitoring & Detection
+- Windows Security Event analysis
+- Authentication log investigation
+- Privilege escalation monitoring
+- Process execution tracking
+- Group Policy Engineering
+- Advanced audit policy configuration
+- Password & lockout policy enforcement
+- PowerShell logging configuration
+- Detection validation through simulation
+- Baseline behavior profiling
+- Security telemetry enhancement
+- Log-driven investigation workflow
 
-Enforced strong account and password policies
-
-Hardened client VM and Domain Controller: disabled unnecessary services, enforced firewall, limited admin access
-
-Secured PowerShell execution and logging
-
-Validated that all detection logs persist across reboots
-
-Documented configurations for mini SOC workflows
-
-🧠 Skills Demonstrated
-
-Active Directory Administration
-
-Domain controller deployment
-
-OU design and structure
-
-User and group lifecycle management
-
-Security Monitoring & Detection
-
-Windows Security Event analysis
-
-Authentication log investigation
-
-Privilege escalation monitoring
-
-Process execution tracking
-
-Group Policy Engineering
-
-Advanced audit policy configuration
-
-Password & lockout policy enforcement
-
-PowerShell logging configuration
-
-Detection validation through simulation
-
-Baseline behavior profiling
-
-Security telemetry enhancement
-
-Log-driven investigation workflow
-
-🚀 Why This Project Matters
+## Why This Project Matters
 
 This lab demonstrates hands-on experience with:
 
-Enterprise Windows authentication flow
-
-How attackers generate detectable artifacts
-
-How defenders configure visibility
-
-How security logs support investigation and response
-
-It reflects practical SOC-ready skills in:
-
-Log analysis
-
-Authentication monitoring
-
-Security hardening
-
-Detection engineering fundamentals
+- Enterprise Windows authentication flow
+- How attackers generate detectable artifacts
+- How defenders configure visibility
+- How security logs support investigation and response
+- It reflects practical SOC-ready skills in: Log analysis, Authentication monitoring, Security hardening, Detection engineering fundamentals
