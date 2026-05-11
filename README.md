@@ -20,7 +20,8 @@ This project is a production-modelled Active Directory (AD) security lab designe
 - Validate detection coverage by correlating simulated attack activity against Windows Security event logs
 
 ## Lab Architecture
-king.local
+```                  
+                   king.local
                         |
           ┌─────────────────────────┐
           │   Domain Controller      │
@@ -36,6 +37,7 @@ king.local
           │   Windows 10/11          │
           │   (King-Client)          │
           └─────────────────────────┘
+```
 
 | Component | Detail |
 |---|---|
